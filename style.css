@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle, #081018, #000810);
+  color: #b8faff;
+  overflow: hidden;
+}
+
+#boot-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #000810;
+  color: #00eaff;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  padding: 1rem;
+  background: rgba(0, 80, 130, 0.2);
+  text-align: center;
+  border-bottom: 1px solid #00ffff33;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  background: rgba(0, 70, 100, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.top-nav button {
+  padding: 0.6rem 1.2rem;
+  background: rgba(0, 180, 255, 0.1);
+  color: #00eaff;
+  border: 1px solid #00eaff55;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.top-nav button:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.window {
+  position: absolute;
+  top: 160px;
+  left: 50px;
+  width: 300px;
+  padding: 1rem;
+  margin: 1rem;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid #00eaff33;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  display: none;
+}
+
+.window h2 {
+  color: #00cfff;
+  margin-bottom: 0.5rem;
+}
+
+.hud-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.imgur.com/wZK0kXz.png');
+  background-size: cover;
+  opacity: 0.03;
+  pointer-events: none;
+}

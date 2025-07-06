@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DinOS - JW Ops Console</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="boot-screen">
+    <div class="boot-logo">🦖 Jurassic World Systems</div>
+    <div class="boot-status">Initializing DinOS...</div>
+  </div>
+
+  <div id="main-ui" class="hidden">
+    <div class="hud-overlay"></div>
+
+    <header>
+      <h1>DinOS Control Console</h1>
+      <span>Status: <strong>Stable</strong></span>
+    </header>
+
+    <nav class="top-nav">
+      <button onclick="toggleWindow('dino-db')">🦕 Dino Database</button>
+      <button onclick="toggleWindow('tracker')">📡 Tracker</button>
+      <button onclick="toggleWindow('genome')">🧬 Genome Lab</button>
+      <button onclick="toggleWindow('logs')">📁 System Logs</button>
+    </nav>
+
+    <div class="window" id="dino-db">
+      <h2>🦕 Dinosaur Database</h2>
+      <p>- Velociraptor “Blue”<br>- T-Rex “Rexy”<br>- Indominus Rex (Quarantined)</p>
+    </div>
+
+    <div class="window" id="tracker">
+      <h2>📡 Live Tracking</h2>
+      <p>Tracking Active: Zone A3<br>Signal: Strong<br>Last Movement: 2m ago</p>
+    </div>
+
+    <div class="window" id="genome">
+      <h2>🧬 Genome Lab</h2>
+      <p>Sequence Editing Locked<br>Security Clearance Required</p>
+    </div>
+
+    <div class="window" id="logs">
+      <h2>📁 System Logs</h2>
+      <p>[07:32] Perimeter Scan: Normal<br>[07:30] Drone Recon: All pens secure<br>[07:15] DNA Sync Complete</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
