@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0b0f1a;
+  color: #e8f0fe;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.boot-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #000;
+  color: #0f0;
+  font-size: 1.2rem;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.8; }
+}
+
+.main-ui {
+  display: flex;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.sidebar {
+  width: 220px;
+  background: #121a2c;
+  padding: 1rem;
+  border-right: 2px solid #1e2a3d;
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #00ffb3;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar .nav-link {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #1e2a3d;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background: #00ffb3;
+  color: #000;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+  background: #0b0f1a;
+}
